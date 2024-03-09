@@ -36,19 +36,20 @@ public class Pizza {
     public String getBill() {
         String bill = "Base Price Of The Pizza: 300\n";
         int price = 300;
-        if(extraCheese){
+        if (extraCheese) {
             bill += "Extra Cheese Added: 80\n";
-            price+=80;
+            price += 80;
         }
-        if(extraToppings){
+        if (extraToppings) {
             bill += "Extra Toppings Added: 70\n";
-            price+=70;
+            price += 70;
         }
-        if(takeAway){
-            bill+= "Paperbag Added: 20\n";
-            price+=20;
-        } 
-        bill+= "Total Price:" + price;
+        if (takeAway) {
+            bill += "Paperbag Added: 20\n";
+            price += 20;
+        }
+        bill += "Total Price:" + price;
+        this.price = price;
         return bill;
     }
 

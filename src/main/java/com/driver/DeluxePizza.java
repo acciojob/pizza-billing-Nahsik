@@ -25,6 +25,7 @@ public class DeluxePizza extends Pizza {
             price += 20;
         }
         bill += "Total Price:" + price;
+        this.price = price;
         return bill;
     }
 }
