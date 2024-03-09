@@ -22,34 +22,38 @@ public class Pizza {
     }
 
     public void addExtraCheese() {
+        if (!extraCheese) {
+            this.price += 80;
+        }
         this.extraCheese = true;
     }
 
     public void addExtraToppings() {
+        if (!extraToppings) {
+            this.price += 70;
+        }
         this.extraToppings = true;
     }
 
     public void addTakeaway() {
+        if (!takeAway) {
+            this.price += 20;
+        }
         this.takeAway = true;
     }
 
     public String getBill() {
         String bill = "Base Price Of The Pizza: 300\n";
-        int price = 300;
         if (extraCheese) {
             bill += "Extra Cheese Added: 80\n";
-            price += 80;
         }
         if (extraToppings) {
             bill += "Extra Toppings Added: 70\n";
-            price += 70;
         }
         if (takeAway) {
             bill += "Paperbag Added: 20\n";
-            price += 20;
         }
-        bill += "Total Price:" + price;
-        this.price = price;
+        bill += "Total Price:" + this.price;
         return bill;
     }
 
