@@ -4,7 +4,10 @@ public class DeluxePizza extends Pizza {
 
     public DeluxePizza(Boolean isVeg) {
         super(isVeg);
-        this.setPrice(400);
+        this.setPrice(600);
+        this.extraCheese = true;
+        this.extraToppings = true ;
+        this.takeAway = false;
     }
 
     public void addExtraCheese() {
@@ -19,6 +22,13 @@ public class DeluxePizza extends Pizza {
             this.price += 120;
         }
         this.extraToppings = true;
+    }
+
+    public void addTakeaway() {
+        if (!takeAway) {
+            this.price += 20;
+        }
+        this.takeAway = true;
     }
 
     public String getBill() {
