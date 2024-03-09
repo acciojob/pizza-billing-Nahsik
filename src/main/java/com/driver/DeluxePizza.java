@@ -32,7 +32,7 @@ public class DeluxePizza extends Pizza {
         if (takeAway) {
             bill += "Paperbag Added: 20\n";
         }
-        bill += "Total Price: " + this.price;
+        bill += "Total Price: " + this.price + "\n";
         return bill;
     }
 }
